@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'dva';
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 // import styles from './IndexPage.css';
+// 引入的菜单
+import MyMenu from '../components/MyMenu'
+// 引入的路由
+import RouterView from '../routers/RouterView'
 const { Header, Content, Sider } = Layout;
-
-function IndexPage() {
-  return (
-     // 先上下布局
+class IndexPage extends Component {
+  render() {
+    console.log(this.props)
+    return (
+       // 先上下布局
      <Layout>
      <Header className="header">
        头部
@@ -14,7 +19,7 @@ function IndexPage() {
      {/* 再左右布局 */}
      <Layout>
        <Sider width={200} style={{ background: '#fff' }}>
-         侧边栏
+       <MyMenu/>
        </Sider>
        <Layout style={{ padding: '0 24px 24px' }}>
          <Breadcrumb style={{ margin: '16px 0' }}>
@@ -30,12 +35,15 @@ function IndexPage() {
              minHeight: 280,
            }}
          >
-           内容
+              <p className='sider content'>Content</p>
+
+              <RouterView routes={this.props.routes}/>
          </Content>
        </Layout>
      </Layout>
    </Layout>
-  );
+    );
+  }
 }
 
 IndexPage.propTypes = {
