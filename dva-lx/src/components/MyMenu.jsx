@@ -8,7 +8,8 @@ const { SubMenu } = Menu
 function createMenu(ary) {
     return ary.map((item,index)=>{
         if(item.path){
-            console.log(item.title)
+            // console.log(item.title)
+            // 判断show为false或者true来判断是否渲染
             return item.show&&<Menu.Item key={item.path}>
                         <NavLink to={item.path}>{item.title}</NavLink>
                     </Menu.Item>
@@ -28,7 +29,7 @@ function createMenu(ary) {
 
 class MyMenu extends Component {
     render() {
-        console.log('MenujsX',routes)
+        // console.log('MenujsX',routes)
         let {path} = this.props.match;
         return <Menu
                 onClick={this.handleClick}
