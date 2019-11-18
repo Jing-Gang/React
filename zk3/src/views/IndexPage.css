@@ -1,0 +1,64 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.normal {
+  font-family: Georgia, sans-serif;
+  margin-top: 3em;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: normal;
+  letter-spacing: -1px;
+}
+
+.welcome {
+  height: 328px;
+  background: url(../assets/yay.jpg) no-repeat center 0;
+  background-size: 388px 328px;
+}
+
+.list {
+  font-size: 1.2em;
+  margin-top: 1.8em;
+  list-style: none;
+  line-height: 1.5em;
+}
+
+.list code {
+  background: #f7f7f7;
+}
+
+.Tabs{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+}
+
+.Tabs a{
+  flex: 1;
+  line-height: 50px;
+  text-align: center;
+}
+
+.Box{
+  width: 100%;
+  height: 60px;
+  background: blue;
+  display: flex;
+  line-height: 60px;
+}
+.item{
+  flex: 1;
+  text-align: center;
+}
+.little{
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  display: flex;
+}
